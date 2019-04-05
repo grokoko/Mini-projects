@@ -20,13 +20,22 @@ def main():
             print("Do widzenia.")
 
         elif choice == "1":
-            print("Do widzenia.")
+            h = input("Podaj liczbę: ")
+            dec = int(h, 16)
+            b = format(dec, '0>42b')
+            print(h, "hex = ", dec, "decimal i ", b, "binary.")
 
         elif choice == "2":
-            print("Do widzenia.")
+            b2 = input("Podaj liczbę: ")
+            liczba = int(b2, 2)
+            hexa = hex(liczba)
+            print(b2, "binary = ", liczba, "decimal i ", hexa, "hex.")
 
         elif choice == "3":
-            print("Do widzenia.")
+            d = int(input("Podaj liczbę: "))
+            he = hex(d)
+            bi = format(d, '0>42b')
+            print(d, "decimal =", he, "hex i", bi, "binary.")
 
         else:
             print("\nNiestety,", choice, "nie jest prawidłowym wyborem.")
