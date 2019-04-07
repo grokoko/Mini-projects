@@ -1,44 +1,44 @@
-#Przelicznik
+#Converter
 
 def main():
     choice = None
     while choice != "0":
         print \
             ("""
-            Przelicznik dla hexów, binarów i decimali
+            Converter for hexadecimals, decimals and binary.
             
-            0 - zakończ
-            1 - przelicz hexa
-            2 - przelicz binary
-            3 - przelicz decimal
+            0 - Quit
+            1 - convert hex
+            2 - convert binary
+            3 - convert decimal
             """)
 
-        choice = input("Wybierasz: ")
+        choice = input("You choose: ")
         print()
 
         if choice == "0":
-            print("Do widzenia.")
+            print("Goodbye.")
 
         elif choice == "1":
-            h = input("Podaj liczbę: ")
+            h = input("Input hex: ")
             dec = int(h, 16)
             b = format(dec, '0>42b')
-            print(h, "hex = ", dec, "decimal i ", b, "binary.")
+            print(h, "hex = ", dec, "decimal and ", b, "binary.")
 
         elif choice == "2":
-            b2 = input("Podaj liczbę: ")
-            liczba = int(b2, 2)
-            hexa = hex(liczba)
-            print(b2, "binary = ", liczba, "decimal i ", hexa, "hex.")
+            b = input("Input binary: ")
+            dec = int(b, 2)
+            h = hex(dec)
+            print(b, "binary = ", dec, "decimal and ", h, "hex.")
 
         elif choice == "3":
-            d = int(input("Podaj liczbę: "))
-            he = hex(d)
-            bi = format(d, '0>42b')
-            print(d, "decimal =", he, "hex i", bi, "binary.")
+            dec = int(input("Input decimal: "))
+            h = hex(dec)
+            b = format(dec, '0>42b')
+            print(dec, "decimal =", h, "hex and", b, "binary.")
 
         else:
-            print("\nNiestety,", choice, "nie jest prawidłowym wyborem.")
+            print("\nSorry,", choice, "is not a correct choice.")
 
 main()
-input("\n\nAby zakończyć program, naciśnij Enter.")
+input("\n\nPress enter to quit.")
